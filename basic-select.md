@@ -545,4 +545,41 @@ We order our output by ascending employee_id.
 ```sql
 SELECT NAME FROM EMPLOYEE WHERE SALARY > 2000  AND MONTHS < 10 ORDER BY EMPLOYEE_ID;  
 ```
+Query the following two values from the STATION table:
+
+The sum of all values in LAT_N rounded to a scale of  decimal places.
+The sum of all values in LONG_W rounded to a scale of  decimal places.
+Input Format
+
+The STATION table is described as follows:
+
+Station.jpg
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+Output Format
+
+Your results must be in the form:
+
+***Solution***
+```sql
+select round(sum(lat_n), 2), round(sum(long_w), 2) 
+from station;
+```
+
+Query the sum of Northern Latitudes (LAT_N) from STATION having values greater than  and less than . Truncate your answer to  decimal places.
+
+Input Format
+
+The STATION table is described as follows:
+
+Station.jpg
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+***Solutions***
+```sql
+select round(sum(lat_n), 4) from station 
+where lat_n > 38.7880 and lat_n < 137.2345;
+```
 
